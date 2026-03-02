@@ -766,10 +766,11 @@
                 dot.classList.toggle('active', i === currentSlide);
             });
             
-            const caption = slides[currentSlide].querySelector('.slide-caption').textContent;
-            const harga = caption.match(/Rp\s*([\d.]+)/)[1].replace(/\./g, '');
-            document.getElementById('hargaMotor').value = formatNumber(parseInt(harga));
-            formatRupiah(document.getElementById('hargaMotor'));
+            // HAPUS BAGIAN INI AGAR HARGA TIDAK BERUBAH SAAT SLIDER BERGERAK
+            // const caption = slides[currentSlide].querySelector('.slide-caption').textContent;
+            // const harga = caption.match(/Rp\s*([\d.]+)/)[1].replace(/\./g, '');
+            // document.getElementById('hargaMotor').value = formatNumber(parseInt(harga));
+            // formatRupiah(document.getElementById('hargaMotor'));
         }
         
         function nextSlide() { showSlide(currentSlide + 1); resetInterval(); }
@@ -878,5 +879,4 @@
         };
     </script>
 </body>
-
 </html>
